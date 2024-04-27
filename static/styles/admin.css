@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url('../fonts/Bold.otf') format('opentype');
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Proxima Nova Bold', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Proxima Nova Bold', sans-serif;
+
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.sidebar-header {
+    padding: 20px;
+    background: #000000;
+    color: #d8b95a;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    font-size: 1.8em;
+}
+
+.sidebar-subheader {
+    padding: 10px;
+    background: #000000;
+    color: #d8b95a;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    font-size: 1.5em;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.sidebar ul li {
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.sidebar ul li a {
+    display: block; 
+    padding: 15px; 
+    color: #fff;
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+.sidebar ul li a:hover, .sidebar ul li a:focus {
+    background-color: #333; 
+    color: #d8b95a;
+}
+
+.logout-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%; 
+  }
+  
+
+  .logout-button {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-top: 1px solid #fff;
+  }
+  
+
+  .logout-button:hover {
+    background-color: #333;
+    color: #d8b95a; 
+    }
+
+.home-container {
+    position: absolute;
+    bottom: 49;
+    width: 100%; 
+  }
+  
+  .home-button {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-top: 1px solid #fff;
+  }
+  
+
+  .home-button:hover {
+    background-color: #333;
+    color: #d8b95a; 
+    }
+.home-button {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-top: 1px solid #fff;
+  }
+  
+
+  .home-button:hover {
+    background-color: #333;
+    color: #d8b95a; 
+    }
+
+.form {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form input[type="text"], .form input[type="password"] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: large;
+}
+
+.form input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 10px 0;
+    font-size: large;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #333;
+    color: #d8b95a;
+}
+
+.form select {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: large;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-size: large;
+}
+
+.user .user-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: large;
+}
+
+.user .user-row .user-cell {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: large;
+}
