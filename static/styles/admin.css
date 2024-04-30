@@ -215,3 +215,77 @@ body {
     margin: 10px 0;
     font-size: large;
 }
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    width: calc(100% - 250px);
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.fixtures-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.fixtures-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.fixtures-container table th {
+    background-color: #000000;
+    color: #d8b95a;
+    padding: 10px;
+    border: 1px solid #000;
+    font-size: large;
+}
+
+.fixtures-container table td {
+    padding: 10px;
+    border: 1px solid #000;
+    text-align: center;
+    vertical-align: middle;
+    font-size: large;
+}
+
+.fixtures-table table {
+    width: 100%; /* Ensures the table takes the full width of its container */
+}
+
+.fixtures-table th, .fixtures-table td {
+    text-align: center; /* Adjust based on your preference */
+    vertical-align: middle;
+    padding: 8px; /* Provides padding within the cells */
+    border-bottom: 1px solid #ccc; /* Adds a subtle border to each row for clarity */
+}
+
+.fixtures-table input[type="text"], .fixtures-table input[type="date"], .fixtures-table button {
+    width: 100%; /* Makes the input fill the cell */
+    box-sizing: border-box; /* Includes padding and border in the width */
+    border: none; /* Removes the border */
+    padding: 8px; /* Adds some padding inside the input */
+    margin: 0; /* Removes any default margin */
+    height: 100%; /* Optional: Adjust height as needed */
+    background: transparent; /* Makes the input transparent */
+    color: inherit; /* Inherits the text color from the parent */
+    font-style: italic;
+}
+
+.fixtures-table button {
+    background-color: #fff; /* Example button color, change as needed */
+    font-family: proxima-nova-bold, sans-serif; /* Example font family, change as needed */
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fixtures-table button:hover {
+    background-color: #0000002a; /* Darker shade for hover effect */
+}

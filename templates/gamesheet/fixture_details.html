@@ -1,0 +1,36 @@
+{% extends 'gamesheet_base.html'%}
+{% block content %}
+<div class="header">
+    <h1>Fixture Details</h1>
+</div>
+<div class="flash">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+</div>
+
+<div class="fixture-details">
+    <div class="staff-table">
+        <table>
+            <tr>
+                <th>Home Team</th>
+                <th>Away Team</th>
+                <th>Date</th>
+                <th>Location</th>
+            </tr>
+            <tr>
+                <td>{{ fixture['home_team'] }}</td>
+                <td>{{ fixture['away_team'] }}</td>
+                <td>{{ fixture['date'] }}</td>
+                <td>{{ fixture['location'] }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'gamesheet_base.html' %}
+{% block content %}
+<div class="header">
+    <h1>Fixtures</h1>
+</div>
+<div class="flash">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+</div>
+
+<div class="fixtures-container">
+    <div class="fixtures-table">
+        <table>
+            <tr>
+                <th>Home Team</th>
+                <th>Away Team</th>
+                <th>Date</th>
+                <th>Location</th>
+                <th>Actions</th>
+            </tr>
+            {% for fixture in fixtures %}
+            <tr>
+                <td>{{ fixture['home_team'] }}</td>
+                <td>{{ fixture['away_team'] }}</td>
+                <td>{{ fixture['date'] }}</td>
+                <td>{{ fixture['location'] }}</td>
+                <td>
+                    <a href="{{ url_for('gamesheet_fixture_details', id=fixture['id']) }}">Details</a>
+                </td>
+            </tr>
+            {% endfor %}
+            <tr>
+                
+                    <form action="{{ url_for('add_fixture') }}" method="post" class="table-form">
+                        <td>
+                        <input type="text" name="home_team" placeholder="Home Team" required>
+                        </td>
+                        <td>
+                        <input type="text" name="away_team" placeholder="Away Team" required>
+                        </td>
+                        <td>
+                        <input type="date" name="date" required>
+                        </td>
+                        <td>
+                        <input type="text" name="location" placeholder="Location" required>
+                        </td>
+                        <td>
+                        <button type="submit">Add Fixture</button>
+                        </td>
+                    </form>
+
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}
